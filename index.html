@@ -1,0 +1,1324 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Silage Wanda Factory | Premium Cattle Feed & Silage Wholesaler - Hasilpur</title>
+    <meta name="description" content="JS Silage Wanda Factory in Hasilpur, Pakistan. Leading wholesaler of premium corn silage, dairy wanda, and cattle feed. Open 24/7. Call +92 333 2827158.">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%2315803d'/%3E%3Ctext x='50' y='68' font-size='58' text-anchor='middle' fill='%23fbbf24'%3E%F0%9F%8C%BE%3C/text%3E%3C/svg%3E">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0fdf4',
+                            100: '#dcfce7',
+                            500: '#22c55e',
+                            600: '#16a34a',
+                            700: '#15803d',
+                            800: '#166534',
+                            900: '#14532d',
+                        },
+                        amberGold: {
+                            400: '#fbbf24',
+                            500: '#f59e0b',
+                            600: '#d97706',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'Segoe UI', 'Roboto', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        .hero-pattern {
+            background-color: #0d2818;
+            background-image: radial-gradient(rgba(34, 197, 94, 0.15) 1px, transparent 0);
+            background-size: 24px 24px;
+        }
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(12px);
+        }
+        .popular-bar {
+            transition: height 0.4s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.3s ease;
+        }
+        .review-card:hover {
+            transform: translateY(-4px);
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f1f1f1; }
+        ::-webkit-scrollbar-thumb { background: #16a34a; border-radius: 4px; }
+
+        /* Scroll reveal animations */
+        .reveal {
+            opacity: 0;
+            transform: translateY(28px);
+            transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal.in-view { opacity: 1; transform: translateY(0); }
+        .reveal-stagger.in-view > * { opacity: 1; transform: translateY(0); }
+        .reveal-stagger > * {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: opacity 0.6s cubic-bezier(0.16,1,0.3,1), transform 0.6s cubic-bezier(0.16,1,0.3,1);
+        }
+        .reveal-stagger.in-view > *:nth-child(1) { transition-delay: 0.05s; }
+        .reveal-stagger.in-view > *:nth-child(2) { transition-delay: 0.15s; }
+        .reveal-stagger.in-view > *:nth-child(3) { transition-delay: 0.25s; }
+        .reveal-stagger.in-view > *:nth-child(4) { transition-delay: 0.35s; }
+        .reveal-stagger.in-view > *:nth-child(5) { transition-delay: 0.45s; }
+        .reveal-stagger.in-view > *:nth-child(6) { transition-delay: 0.55s; }
+        .reveal-stagger.in-view > *:nth-child(7) { transition-delay: 0.65s; }
+        .reveal-stagger.in-view > *:nth-child(8) { transition-delay: 0.75s; }
+
+        @keyframes floatY {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        .float-anim { animation: floatY 4.5s ease-in-out infinite; }
+
+        @keyframes cartPop {
+            0% { transform: scale(1); }
+            35% { transform: scale(1.35); }
+            100% { transform: scale(1); }
+        }
+        .cart-pop { animation: cartPop 0.35s ease; }
+
+        @keyframes slideInCart {
+            from { transform: translateX(100%); }
+            to { transform: translateX(0); }
+        }
+        .cart-panel-open { animation: slideInCart 0.35s cubic-bezier(0.16,1,0.3,1) forwards; }
+
+        .qty-btn { transition: background-color 0.15s ease, transform 0.1s ease; }
+        .qty-btn:active { transform: scale(0.9); }
+
+        @media (prefers-reduced-motion: reduce) {
+            .reveal, .reveal-stagger > *, .float-anim, .cart-panel-open {
+                animation: none !important;
+                transition: none !important;
+                opacity: 1 !important;
+                transform: none !important;
+            }
+        }
+
+        a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+            outline: 2px solid #16a34a;
+            outline-offset: 2px;
+        }
+    </style>
+</head>
+<body class="bg-stone-50 text-slate-800 antialiased selection:bg-brand-500 selection:text-white">
+
+    <!-- Top Announcement Bar -->
+    <div class="bg-brand-900 text-white text-xs sm:text-sm py-2 px-4 border-b border-brand-800">
+        <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2">
+            <div class="flex items-center space-x-3">
+                <span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-semibold bg-emerald-500/20 text-emerald-300 border border-emerald-400/30">
+                    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse mr-1.5"></span> Open 24 Hours
+                </span>
+                <span class="hidden md:inline text-stone-300">Hasilpur's Premier Corn Silage & High-Yield Dairy Wanda Manufacturer</span>
+            </div>
+            <div class="flex items-center space-x-4">
+                <a href="tel:+923332827158" class="hover:text-amberGold-400 font-medium transition flex items-center">
+                    <i class="fa-solid fa-phone text-xs mr-1.5 text-amberGold-400"></i> +92 333 2827158
+                </a>
+                <span class="text-brand-700">|</span>
+                <a href="https://wa.me/923332827158?text=Hello%20JS%20Silage%20Wanda%20Factory%2C%20I%20am%20inquiring%20about%20wholesale%20rates" target="_blank" class="hover:text-emerald-300 transition flex items-center">
+                    <i class="fa-brands fa-whatsapp text-emerald-400 mr-1.5"></i> WhatsApp
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header / Navigation -->
+    <header class="sticky top-0 z-50 glass-nav border-b border-slate-200/80 transition-all shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Brand Logo -->
+                <a href="#" class="flex items-center space-x-3 group">
+                    <div class="w-12 h-12 rounded-xl bg-gradient-to-tr from-brand-800 to-brand-600 flex items-center justify-center text-white shadow-md group-hover:scale-105 transition-transform">
+                        <i class="fa-solid fa-wheat-awn text-2xl text-amberGold-400"></i>
+                    </div>
+                    <div>
+                        <span class="text-xl sm:text-2xl font-black tracking-tight text-slate-900 block leading-tight">JS SILAGE</span>
+                        <span class="text-xs tracking-wider uppercase font-semibold text-brand-700 block">&amp; Wanda Factory Hasilpur</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Nav -->
+                <nav class="hidden lg:flex items-center space-x-8 text-sm font-semibold text-slate-700">
+                    <a href="#about" class="hover:text-brand-600 transition">About Us</a>
+                    <a href="#products" class="hover:text-brand-600 transition">Products</a>
+                    <a href="#gallery" class="hover:text-brand-600 transition">Photos &amp; Videos</a>
+                    <a href="#reviews" class="hover:text-brand-600 transition flex items-center">
+                        Reviews
+                        <span class="ml-1.5 px-1.5 py-0.5 text-xs bg-amber-100 text-amber-800 rounded font-bold">5.0 ★</span>
+                    </a>
+                    <a href="#popular-times" class="hover:text-brand-600 transition">Popular Times</a>
+                    <a href="#contact" class="hover:text-brand-600 transition">Location &amp; Contact</a>
+                </nav>
+
+                <!-- Quick Action Buttons -->
+                <div class="hidden sm:flex items-center space-x-3">
+                    <button onclick="toggleCart(true)" class="relative w-11 h-11 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 flex items-center justify-center transition" aria-label="View order cart">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span id="cartBadge" class="hidden absolute -top-1.5 -right-1.5 w-5 h-5 rounded-full bg-amber-500 text-slate-950 text-[11px] font-bold flex items-center justify-center">0</span>
+                    </button>
+                    <a href="tel:+923332827158" class="inline-flex items-center justify-center px-5 py-2.5 rounded-lg bg-brand-700 text-white font-semibold text-sm hover:bg-brand-800 transition shadow-sm hover:shadow">
+                        <i class="fa-solid fa-phone-volume mr-2 text-amber-300"></i> Call Wholesaler
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="lg:hidden flex items-center gap-2">
+                    <button onclick="toggleCart(true)" class="relative w-10 h-10 rounded-lg bg-slate-100 text-slate-700 flex items-center justify-center" aria-label="View order cart">
+                        <i class="fa-solid fa-cart-shopping text-sm"></i>
+                        <span id="cartBadgeMobile" class="hidden absolute -top-1.5 -right-1.5 w-4.5 h-4.5 rounded-full bg-amber-500 text-slate-950 text-[10px] font-bold flex items-center justify-center px-1">0</span>
+                    </button>
+                    <button id="mobileMenuBtn" class="p-2 rounded-lg text-slate-600 hover:bg-slate-100 focus:outline-none" aria-label="Toggle menu">
+                        <i class="fa-solid fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Nav Menu -->
+        <div id="mobileMenu" class="hidden lg:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-6 space-y-3">
+            <a href="#about" class="block py-2 text-slate-700 font-medium hover:text-brand-600">About Us</a>
+            <a href="#products" class="block py-2 text-slate-700 font-medium hover:text-brand-600">Products &amp; Feeds</a>
+            <a href="#gallery" class="block py-2 text-slate-700 font-medium hover:text-brand-600">Photos &amp; Videos</a>
+            <a href="#reviews" class="block py-2 text-slate-700 font-medium hover:text-brand-600">Customer Reviews (5.0 ★)</a>
+            <a href="#popular-times" class="block py-2 text-slate-700 font-medium hover:text-brand-600">Popular Working Times</a>
+            <a href="#contact" class="block py-2 text-slate-700 font-medium hover:text-brand-600">Location Map &amp; Contact</a>
+            <div class="pt-3 border-t border-slate-100 flex flex-col gap-2">
+                <a href="tel:+923332827158" class="w-full text-center py-2.5 rounded-lg bg-brand-700 text-white font-semibold text-sm">
+                    <i class="fa-solid fa-phone mr-2"></i> +92 333 2827158
+                </a>
+                <a href="https://wa.me/923332827158?text=Hello%20JS%20Silage%20Wanda%20Factory" target="_blank" class="w-full text-center py-2.5 rounded-lg bg-emerald-600 text-white font-semibold text-sm">
+                    <i class="fa-brands fa-whatsapp mr-2"></i> WhatsApp Inquiry
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative hero-pattern text-white overflow-hidden py-16 lg:py-24">
+        <!-- Ambient Decorative Glow -->
+        <div class="absolute -top-32 -left-32 w-96 h-96 bg-brand-500/20 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute -bottom-32 -right-32 w-96 h-96 bg-amber-500/15 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-950/80 border border-brand-500/40 text-emerald-300 text-xs sm:text-sm font-medium reveal">
+                        <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-ping"></span>
+                        <span>Open 24 Hours Wholesaler • Hasilpur, Punjab</span>
+                    </div>
+
+                    <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight reveal" style="transition-delay:0.08s">
+                        Nutritious Corn Silage &amp; High-Yield <span class="text-transparent bg-clip-text bg-gradient-to-r from-amberGold-400 to-amber-200">Dairy Wanda</span>
+                    </h1>
+
+                    <p class="text-stone-300 text-base sm:text-lg leading-relaxed max-w-2xl reveal" style="transition-delay:0.16s">
+                        Pakistan's trusted wholesale manufacturer of fermented corn fodder (Makki Silage) and scientifically formulated cattle wanda. Guaranteed fresh, highly digestible, and engineered for maximum milk &amp; meat production.
+                    </p>
+
+                    <!-- Trust Metric Badges -->
+                    <div class="flex flex-wrap gap-4 pt-2 reveal" style="transition-delay:0.24s">
+                        <div class="flex items-center bg-white/10 backdrop-blur-md rounded-xl px-4 py-2.5 border border-white/15">
+                            <div class="flex text-amberGold-400 text-base mr-2.5">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                            <div class="text-left">
+                                <div class="text-sm font-bold text-white leading-tight">5.0 Star Rating</div>
+                                <div class="text-xs text-stone-300">Verified Google Reviews</div>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center bg-white/10 backdrop-blur-md rounded-xl px-4 py-2.5 border border-white/15">
+                            <i class="fa-solid fa-truck-fast text-emerald-400 text-xl mr-2.5"></i>
+                            <div class="text-left">
+                                <div class="text-sm font-bold text-white leading-tight">24/7 Bulk Supply</div>
+                                <div class="text-xs text-stone-300">Hasilpur &amp; All Punjab</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-col sm:flex-row gap-3 pt-4 reveal" style="transition-delay:0.32s">
+                        <a href="tel:+923332827158" class="inline-flex items-center justify-center px-6 py-3.5 rounded-xl bg-gradient-to-r from-amberGold-500 to-amber-600 text-slate-950 font-bold text-base hover:brightness-110 transition shadow-lg shadow-amber-500/20">
+                            <i class="fa-solid fa-phone-volume mr-2.5 text-slate-900"></i> Call +92 333 2827158
+                        </a>
+                        <a href="https://wa.me/923332827158?text=Hello%20JS%20Silage%20Wanda%20Factory%2C%20please%20send%20me%20today%27s%20rates" target="_blank" class="inline-flex items-center justify-center px-6 py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-base transition shadow-md">
+                            <i class="fa-brands fa-whatsapp mr-2.5 text-xl"></i> Instant WhatsApp Order
+                        </a>
+                        <a href="#products" class="inline-flex items-center justify-center px-5 py-3.5 rounded-xl bg-white/10 hover:bg-white/20 text-white font-semibold text-base transition border border-white/20">
+                            <i class="fa-solid fa-boxes-stacked mr-2 text-amberGold-400"></i> Browse Products
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Hero Image Showcase Card -->
+                <div class="lg:col-span-5">
+                    <div class="relative bg-white/5 p-3 rounded-2xl border border-white/15 shadow-2xl backdrop-blur-sm reveal float-anim" style="transition-delay:0.2s">
+                        <div class="relative rounded-xl overflow-hidden aspect-[4/3] group">
+                            <img src="https://images.unsplash.com/photo-1500595046743-cd271d694d30?q=80&w=900&auto=format&fit=crop" alt="Corn field harvested for silage production" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700" loading="lazy">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+
+                            <div class="absolute bottom-4 left-4 right-4 text-white">
+                                <span class="px-2.5 py-1 rounded bg-amber-500 text-black font-bold text-xs uppercase tracking-wider">Hasilpur Production Hub</span>
+                                <h3 class="text-lg font-bold mt-1.5">Fresh Baled Makki Silage &amp; High Protein Wanda</h3>
+                                <p class="text-xs text-stone-300 mt-0.5">Heavy bale compacting with zero air permeability for maximum shelf-life.</p>
+                            </div>
+                        </div>
+
+                        <!-- Highlights strip under photo -->
+                        <div class="grid grid-cols-3 gap-2 mt-3 text-center text-xs">
+                            <div class="bg-white/10 rounded-lg p-2 border border-white/10">
+                                <div class="font-bold text-amberGold-400 text-sm">100%</div>
+                                <div class="text-stone-300 text-[11px]">Corn Grains</div>
+                            </div>
+                            <div class="bg-white/10 rounded-lg p-2 border border-white/10">
+                                <div class="font-bold text-emerald-400 text-sm">24 Hours</div>
+                                <div class="text-stone-300 text-[11px]">Factory Loading</div>
+                            </div>
+                            <div class="bg-white/10 rounded-lg p-2 border border-white/10">
+                                <div class="font-bold text-amberGold-400 text-sm">5.0 ★</div>
+                                <div class="text-stone-300 text-[11px]">Farmer Satisfaction</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Wholesaler Info Ribbon -->
+    <div class="bg-amber-50 border-y border-amber-200/80 py-4">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center md:text-left">
+                <div class="flex items-center justify-center md:justify-start space-x-3">
+                    <div class="w-10 h-10 rounded-lg bg-amber-100 text-amber-800 flex items-center justify-center text-lg"><i class="fa-solid fa-clock"></i></div>
+                    <div>
+                        <div class="text-xs text-slate-500 uppercase font-semibold">Business Hours</div>
+                        <div class="text-sm font-bold text-slate-900">Open 24 Hours / 7 Days</div>
+                    </div>
+                </div>
+                <div class="flex items-center justify-center md:justify-start space-x-3">
+                    <div class="w-10 h-10 rounded-lg bg-emerald-100 text-emerald-800 flex items-center justify-center text-lg"><i class="fa-solid fa-map-pin"></i></div>
+                    <div>
+                        <div class="text-xs text-slate-500 uppercase font-semibold">Location</div>
+                        <div class="text-sm font-bold text-slate-900">Hasilpur, Bahawalpur Dist.</div>
+                    </div>
+                </div>
+                <div class="flex items-center justify-center md:justify-start space-x-3">
+                    <div class="w-10 h-10 rounded-lg bg-blue-100 text-blue-800 flex items-center justify-center text-lg"><i class="fa-solid fa-boxes-stacked"></i></div>
+                    <div>
+                        <div class="text-xs text-slate-500 uppercase font-semibold">Business Type</div>
+                        <div class="text-sm font-bold text-slate-900">Direct Wholesaler &amp; Mill</div>
+                    </div>
+                </div>
+                <div class="flex items-center justify-center md:justify-start space-x-3">
+                    <div class="w-10 h-10 rounded-lg bg-purple-100 text-purple-800 flex items-center justify-center text-lg"><i class="fa-solid fa-phone"></i></div>
+                    <div>
+                        <div class="text-xs text-slate-500 uppercase font-semibold">Order Direct</div>
+                        <div class="text-sm font-bold text-slate-900">+92 333 2827158</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+
+                <div class="relative reveal">
+                    <div class="grid grid-cols-2 gap-4">
+                        <img class="w-full h-56 sm:h-64 rounded-2xl object-cover shadow-md" src="https://images.unsplash.com/photo-1595838728563-71868a2d3f77?q=80&w=600&auto=format&fit=crop" alt="Cattle eating silage feed" loading="lazy">
+                        <img class="w-full h-56 sm:h-64 rounded-2xl object-cover shadow-md mt-6" src="https://images.unsplash.com/photo-1546445317-29f4545e9d53?q=80&w=600&auto=format&fit=crop" alt="Healthy dairy cattle at pasture" loading="lazy">
+                    </div>
+                    <div class="absolute -bottom-6 -right-2 sm:bottom-4 sm:right-4 bg-brand-800 text-white p-5 rounded-2xl shadow-xl max-w-[220px]">
+                        <div class="text-3xl font-extrabold text-amberGold-400">#1 Choice</div>
+                        <p class="text-xs text-stone-200 mt-1">For dairy farms across South Punjab demanding premium milk fat &amp; yield.</p>
+                    </div>
+                </div>
+
+                <div class="space-y-6 reveal" style="transition-delay:0.1s">
+                    <div class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-brand-700 bg-brand-50 px-3 py-1 rounded-full border border-brand-200">
+                        <i class="fa-solid fa-shield-halved"></i> About JS Silage Wanda Factory
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+                        Powering Modern Dairy &amp; Livestock with Highest Quality Nutrition
+                    </h2>
+                    <p class="text-slate-600 leading-relaxed">
+                        Situated strategically in the agricultural heartland of <strong>Hasilpur</strong>, <strong>JS Silage Wanda Factory</strong> (part of JS Feeds &amp; Fodders, run under Dr. Abdul Basit) is a leading wholesale supplier of fermented whole-crop maize silage and balanced livestock wanda (concentrate feed).
+                    </p>
+
+                    <div class="space-y-3 pt-2">
+                        <div class="flex items-start">
+                            <div class="mt-1 w-5 h-5 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center text-xs shrink-0 mr-3"><i class="fa-solid fa-check"></i></div>
+                            <p class="text-sm text-slate-700"><strong>Nutrient-Dense Corn Silage:</strong> Harvested at optimal dry matter stage with rich starch content and high grain ratio.</p>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="mt-1 w-5 h-5 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center text-xs shrink-0 mr-3"><i class="fa-solid fa-check"></i></div>
+                            <p class="text-sm text-slate-700"><strong>Precision Dairy Wanda:</strong> Formulated with protein meals, bypass fats, minerals, and vitamins for milking cows &amp; buffaloes.</p>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="mt-1 w-5 h-5 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center text-xs shrink-0 mr-3"><i class="fa-solid fa-check"></i></div>
+                            <p class="text-sm text-slate-700"><strong>Uninterrupted 24-Hour Wholesaling:</strong> Trucks, trolleys, and freight vehicles can load at any hour of day or night.</p>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="mt-1 w-5 h-5 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center text-xs shrink-0 mr-3"><i class="fa-solid fa-check"></i></div>
+                            <p class="text-sm text-slate-700"><strong>Alfalfa Hay &amp; Goat Wanda:</strong> Export-quality alfalfa hay and JS Special Wanda formulated specifically for goats.</p>
+                        </div>
+                    </div>
+
+                    <div class="pt-4 flex flex-wrap items-center gap-4">
+                        <a href="tel:+923332827158" class="px-6 py-3 rounded-xl bg-brand-700 text-white font-bold text-sm hover:bg-brand-800 transition"><i class="fa-solid fa-phone mr-2"></i> Call for Wholesale Price</a>
+                        <a href="#reviews" class="px-5 py-3 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 font-semibold text-sm transition">Read Farmer Reviews</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Products & Wholesale Offerings Section -->
+    <section id="products" class="py-16 bg-slate-50 border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12 reveal">
+                <span class="text-xs font-bold uppercase tracking-wider text-brand-700 bg-brand-100 px-3 py-1 rounded-full">Our Products</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-3 tracking-tight">Wholesale Feed &amp; Silage Solutions</h2>
+                <p class="text-slate-600 mt-2 text-sm sm:text-base">Browse our range, set the quantity you need, and add it to your order — then send it straight to us on WhatsApp in one tap.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 reveal-stagger">
+                <!-- Product 1 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-200 flex flex-col" data-product-card>
+                    <div class="relative h-48 overflow-hidden bg-slate-100">
+                        <img src="https://images.unsplash.com/photo-1574943320219-553eb213f72d?q=80&w=700&auto=format&fit=crop" alt="Premium corn silage bales" class="w-full h-full object-cover" loading="lazy">
+                        <span class="absolute top-3 right-3 bg-brand-600 text-white text-xs font-bold px-2.5 py-1 rounded-md shadow">Top Seller</span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-xl font-bold text-slate-900">Premium Corn Silage (Makki)</h3>
+                            <p class="text-xs text-brand-700 font-medium mt-0.5">Round Bales &amp; Bunker Wholesale</p>
+                            <p class="text-slate-600 text-sm mt-3 leading-relaxed">
+                                High-grain chopped corn preserved with scientific inoculation for uniform lactic acid fermentation. Increases lactation and fat percentage.
+                            </p>
+                            <ul class="text-xs text-slate-600 space-y-1.5 mt-4 bg-stone-50 p-3 rounded-lg border border-stone-200">
+                                <li class="flex items-center"><i class="fa-solid fa-check text-brand-600 mr-2"></i><strong>Moisture:</strong>&nbsp;65% - 68% (Optimized)</li>
+                                <li class="flex items-center"><i class="fa-solid fa-check text-brand-600 mr-2"></i><strong>Packaging:</strong>&nbsp;60kg, 100kg &amp; 1000kg Bales</li>
+                                <li class="flex items-center"><i class="fa-solid fa-check text-brand-600 mr-2"></i><strong>Shelf Life:</strong>&nbsp;18+ Months UV-Protected</li>
+                            </ul>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-slate-100 space-y-2.5">
+                            <div class="flex items-center justify-between">
+                                <span class="text-xs font-semibold text-slate-500 uppercase tracking-wide">Bags / Bales</span>
+                                <div class="flex items-center gap-2">
+                                    <button type="button" onclick="stepQty('silage', -1)" class="qty-btn w-8 h-8 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold flex items-center justify-center">−</button>
+                                    <span id="qty-silage" class="w-8 text-center font-bold text-slate-900">1</span>
+                                    <button type="button" onclick="stepQty('silage', 1)" class="qty-btn w-8 h-8 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold flex items-center justify-center">+</button>
+                                </div>
+                            </div>
+                            <button type="button" onclick="addToCart('silage', 'Premium Corn Silage (Makki)')" class="w-full block text-center py-2.5 rounded-lg bg-brand-600 hover:bg-brand-700 text-white font-bold text-xs uppercase tracking-wider transition">
+                                <i class="fa-solid fa-cart-plus mr-1.5"></i> Add to Order
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-200 flex flex-col" data-product-card>
+                    <div class="relative h-48 overflow-hidden bg-slate-100">
+                        <img src="https://images.unsplash.com/photo-1560493676-04071c5f467b?q=80&w=700&auto=format&fit=crop" alt="High-yield dairy cattle wanda bags" class="w-full h-full object-cover" loading="lazy">
+                        <span class="absolute top-3 right-3 bg-amberGold-500 text-slate-900 text-xs font-bold px-2.5 py-1 rounded-md shadow">Special Formula</span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-xl font-bold text-slate-900">JS Dairy Wanda (Milking)</h3>
+                            <p class="text-xs text-amber-700 font-medium mt-0.5">High Crude Protein &amp; Energy</p>
+                            <p class="text-slate-600 text-sm mt-3 leading-relaxed">
+                                Scientifically balanced grain, meal, and mineral formula crafted to boost milk output in Sahiwal cows, Cholistani breeds, and Nili-Ravi buffaloes.
+                            </p>
+                            <ul class="text-xs text-slate-600 space-y-1.5 mt-4 bg-stone-50 p-3 rounded-lg border border-stone-200">
+                                <li class="flex items-center"><i class="fa-solid fa-check text-brand-600 mr-2"></i><strong>Crude Protein (CP):</strong>&nbsp;16% - 19%</li>
+                                <li class="flex items-center"><i class="fa-solid fa-check text-brand-600 mr-2"></i><strong>Includes:</strong>&nbsp;Bypass Fat, Minerals, Calcium</li>
+                                <li class="flex items-center"><i class="fa-solid fa-check text-brand-600 mr-2"></i><strong>Bag Size:</strong>&nbsp;40kg / 50kg standard woven bags</li>
+                            </ul>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-slate-100 space-y-2.5">
+                            <div class="flex items-center justify-between">
+                                <span class="text-xs font-semibold text-slate-500 uppercase tracking-wide">Bags</span>
+                                <div class="flex items-center gap-2">
+                                    <button type="button" onclick="stepQty('wanda', -1)" class="qty-btn w-8 h-8 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold flex items-center justify-center">−</button>
+                                    <span id="qty-wanda" class="w-8 text-center font-bold text-slate-900">1</span>
+                                    <button type="button" onclick="stepQty('wanda', 1)" class="qty-btn w-8 h-8 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold flex items-center justify-center">+</button>
+                                </div>
+                            </div>
+                            <button type="button" onclick="addToCart('wanda', 'JS Dairy Wanda (Milking)')" class="w-full block text-center py-2.5 rounded-lg bg-brand-600 hover:bg-brand-700 text-white font-bold text-xs uppercase tracking-wider transition">
+                                <i class="fa-solid fa-cart-plus mr-1.5"></i> Add to Order
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-200 flex flex-col" data-product-card>
+                    <div class="relative h-48 overflow-hidden bg-slate-100">
+                        <img src="https://images.unsplash.com/photo-1527153857715-3908f2ae5e81?q=80&w=700&auto=format&fit=crop" alt="Cattle fattening feed" class="w-full h-full object-cover" loading="lazy">
+                        <span class="absolute top-3 right-3 bg-blue-600 text-white text-xs font-bold px-2.5 py-1 rounded-md shadow">Fast Growth</span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-xl font-bold text-slate-900">Calf &amp; Fattening Wanda</h3>
+                            <p class="text-xs text-blue-700 font-medium mt-0.5">Rapid Weight Gain Formulation</p>
+                            <p class="text-slate-600 text-sm mt-3 leading-relaxed">
+                                Specially designed for Eid-ul-Adha fattening cattle and growing calves. Increases daily weight gain (ADG) with exceptional digestive efficiency.
+                            </p>
+                            <ul class="text-xs text-slate-600 space-y-1.5 mt-4 bg-stone-50 p-3 rounded-lg border border-stone-200">
+                                <li class="flex items-center"><i class="fa-solid fa-check text-brand-600 mr-2"></i><strong>Target:</strong>&nbsp;Fast meat gain &amp; bone density</li>
+                                <li class="flex items-center"><i class="fa-solid fa-check text-brand-600 mr-2"></i><strong>Palatability:</strong>&nbsp;High aroma &amp; molasses blend</li>
+                                <li class="flex items-center"><i class="fa-solid fa-check text-brand-600 mr-2"></i><strong>Available:</strong>&nbsp;Pelleted &amp; Mash varieties</li>
+                            </ul>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-slate-100 space-y-2.5">
+                            <div class="flex items-center justify-between">
+                                <span class="text-xs font-semibold text-slate-500 uppercase tracking-wide">Bags</span>
+                                <div class="flex items-center gap-2">
+                                    <button type="button" onclick="stepQty('fattening', -1)" class="qty-btn w-8 h-8 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold flex items-center justify-center">−</button>
+                                    <span id="qty-fattening" class="w-8 text-center font-bold text-slate-900">1</span>
+                                    <button type="button" onclick="stepQty('fattening', 1)" class="qty-btn w-8 h-8 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold flex items-center justify-center">+</button>
+                                </div>
+                            </div>
+                            <button type="button" onclick="addToCart('fattening', 'Calf & Fattening Wanda')" class="w-full block text-center py-2.5 rounded-lg bg-brand-600 hover:bg-brand-700 text-white font-bold text-xs uppercase tracking-wider transition">
+                                <i class="fa-solid fa-cart-plus mr-1.5"></i> Add to Order
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 4: Alfalfa Hay -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-200 flex flex-col" data-product-card>
+                    <div class="relative h-48 overflow-hidden bg-slate-100">
+                        <img src="https://images.unsplash.com/photo-1591857177580-dc82b9ac4e1e?q=80&w=700&auto=format&fit=crop" alt="Baled alfalfa hay" class="w-full h-full object-cover" loading="lazy">
+                        <span class="absolute top-3 right-3 bg-purple-600 text-white text-xs font-bold px-2.5 py-1 rounded-md shadow">Export Quality</span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-xl font-bold text-slate-900">Export Quality Alfalfa Hay</h3>
+                            <p class="text-xs text-purple-700 font-medium mt-0.5">Premium Leafy Dried Fodder</p>
+                            <p class="text-slate-600 text-sm mt-3 leading-relaxed">
+                                Sun-cured, leaf-rich alfalfa hay packed tightly for long-distance transport. High in calcium and digestible protein for dairy and goat herds.
+                            </p>
+                            <ul class="text-xs text-slate-600 space-y-1.5 mt-4 bg-stone-50 p-3 rounded-lg border border-stone-200">
+                                <li class="flex items-center"><i class="fa-solid fa-check text-brand-600 mr-2"></i><strong>Cut Stage:</strong>&nbsp;Early bloom, high leaf-to-stem ratio</li>
+                                <li class="flex items-center"><i class="fa-solid fa-check text-brand-600 mr-2"></i><strong>Packaging:</strong>&nbsp;Compressed square bales</li>
+                                <li class="flex items-center"><i class="fa-solid fa-check text-brand-600 mr-2"></i><strong>Best For:</strong>&nbsp;Dairy cattle, goats &amp; horses</li>
+                            </ul>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-slate-100 space-y-2.5">
+                            <div class="flex items-center justify-between">
+                                <span class="text-xs font-semibold text-slate-500 uppercase tracking-wide">Bales</span>
+                                <div class="flex items-center gap-2">
+                                    <button type="button" onclick="stepQty('alfalfa', -1)" class="qty-btn w-8 h-8 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold flex items-center justify-center">−</button>
+                                    <span id="qty-alfalfa" class="w-8 text-center font-bold text-slate-900">1</span>
+                                    <button type="button" onclick="stepQty('alfalfa', 1)" class="qty-btn w-8 h-8 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold flex items-center justify-center">+</button>
+                                </div>
+                            </div>
+                            <button type="button" onclick="addToCart('alfalfa', 'Export Quality Alfalfa Hay')" class="w-full block text-center py-2.5 rounded-lg bg-brand-600 hover:bg-brand-700 text-white font-bold text-xs uppercase tracking-wider transition">
+                                <i class="fa-solid fa-cart-plus mr-1.5"></i> Add to Order
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 5: Goat Wanda -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-200 flex flex-col" data-product-card>
+                    <div class="relative h-48 overflow-hidden bg-slate-100">
+                        <img src="https://images.unsplash.com/photo-1524024973431-2ad916746881?q=80&w=700&auto=format&fit=crop" alt="Goats feeding on total mixed ration" class="w-full h-full object-cover" loading="lazy">
+                        <span class="absolute top-3 right-3 bg-rose-600 text-white text-xs font-bold px-2.5 py-1 rounded-md shadow">JS Special</span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-xl font-bold text-slate-900">JS Special Goat Wanda (TMR)</h3>
+                            <p class="text-xs text-rose-700 font-medium mt-0.5">Total Mixed Ration for Goats</p>
+                            <p class="text-slate-600 text-sm mt-3 leading-relaxed">
+                                A complete total mixed ration formulated specifically for goats — balancing fibre, energy, and minerals for healthy weight gain and coat condition.
+                            </p>
+                            <ul class="text-xs text-slate-600 space-y-1.5 mt-4 bg-stone-50 p-3 rounded-lg border border-stone-200">
+                                <li class="flex items-center"><i class="fa-solid fa-check text-brand-600 mr-2"></i><strong>Formulated For:</strong>&nbsp;Goats of all ages</li>
+                                <li class="flex items-center"><i class="fa-solid fa-check text-brand-600 mr-2"></i><strong>Form:</strong>&nbsp;Total Mixed Ration (TMR)</li>
+                                <li class="flex items-center"><i class="fa-solid fa-check text-brand-600 mr-2"></i><strong>Bag Size:</strong>&nbsp;40kg / 50kg woven bags</li>
+                            </ul>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-slate-100 space-y-2.5">
+                            <div class="flex items-center justify-between">
+                                <span class="text-xs font-semibold text-slate-500 uppercase tracking-wide">Bags</span>
+                                <div class="flex items-center gap-2">
+                                    <button type="button" onclick="stepQty('goat', -1)" class="qty-btn w-8 h-8 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold flex items-center justify-center">−</button>
+                                    <span id="qty-goat" class="w-8 text-center font-bold text-slate-900">1</span>
+                                    <button type="button" onclick="stepQty('goat', 1)" class="qty-btn w-8 h-8 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold flex items-center justify-center">+</button>
+                                </div>
+                            </div>
+                            <button type="button" onclick="addToCart('goat', 'JS Special Goat Wanda (TMR)')" class="w-full block text-center py-2.5 rounded-lg bg-brand-600 hover:bg-brand-700 text-white font-bold text-xs uppercase tracking-wider transition">
+                                <i class="fa-solid fa-cart-plus mr-1.5"></i> Add to Order
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 6: Bulk/Custom -->
+                <div class="bg-gradient-to-br from-brand-800 to-brand-900 text-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col p-6 justify-between" data-product-card>
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center text-2xl mb-4"><i class="fa-solid fa-truck-ramp-box text-amberGold-400"></i></div>
+                        <h3 class="text-xl font-bold">Need a Custom Truckload?</h3>
+                        <p class="text-stone-300 text-sm mt-3 leading-relaxed">
+                            Ordering a full Trola or Mazda-load, mixing multiple products, or need a recurring monthly supply contract? Skip the cart — talk directly to our wholesale desk for the best bulk pricing.
+                        </p>
+                    </div>
+                    <div class="mt-6 space-y-2.5">
+                        <a href="tel:+923332827158" class="w-full block text-center py-2.5 rounded-lg bg-amberGold-500 hover:bg-amber-400 text-slate-950 font-bold text-xs uppercase tracking-wider transition">
+                            <i class="fa-solid fa-phone mr-1.5"></i> Call Wholesale Desk
+                        </a>
+                        <a href="https://wa.me/923332827158?text=I%20need%20a%20custom%20bulk%20truckload%20quote%20from%20JS%20Silage%20Wanda%20Factory" target="_blank" class="w-full block text-center py-2.5 rounded-lg bg-white/10 hover:bg-white/20 text-white font-bold text-xs uppercase tracking-wider transition border border-white/20">
+                                <i class="fa-brands fa-whatsapp mr-1.5"></i> WhatsApp Bulk Quote
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Photos & Videos Section -->
+    <section id="gallery" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 reveal">
+                <div>
+                    <span class="text-xs font-bold uppercase tracking-wider text-brand-700 bg-brand-50 px-3 py-1 rounded-full border border-brand-200">Factory Gallery</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-2 tracking-tight">Photos &amp; Videos</h2>
+                    <p class="text-slate-600 text-sm sm:text-base mt-1">A look at round bale packing, raw materials, the wanda mixing unit, and daily dispatch. For the latest live footage from the farm, follow our official channels below.</p>
+                </div>
+
+                <!-- Gallery Category Filters -->
+                <div class="flex flex-wrap gap-2 mt-4 md:mt-0" id="galleryFilters">
+                    <button onclick="filterGallery('all', event)" class="gallery-btn active px-4 py-1.5 rounded-full text-xs font-bold bg-brand-700 text-white shadow-sm transition">All Photos</button>
+                    <button onclick="filterGallery('silage', event)" class="gallery-btn px-4 py-1.5 rounded-full text-xs font-bold bg-slate-100 text-slate-700 hover:bg-slate-200 transition">Silage Bales</button>
+                    <button onclick="filterGallery('wanda', event)" class="gallery-btn px-4 py-1.5 rounded-full text-xs font-bold bg-slate-100 text-slate-700 hover:bg-slate-200 transition">Wanda Mill</button>
+                </div>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 reveal-stagger" id="galleryGrid">
+
+                <div class="gallery-item silage group relative rounded-2xl overflow-hidden aspect-[4/3] bg-slate-900 cursor-pointer shadow-md" onclick="openMediaModal('https://images.unsplash.com/photo-1500595046743-cd271d694d30?q=80&w=1200', 'Corn harvesting for silage production')">
+                    <img src="https://images.unsplash.com/photo-1500595046743-cd271d694d30?q=80&w=600&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" alt="Corn harvest" loading="lazy">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center"><i class="fa-solid fa-magnifying-glass-plus text-white text-2xl"></i></div>
+                    <span class="absolute bottom-2 left-2 bg-black/60 backdrop-blur-sm text-white text-[11px] px-2 py-0.5 rounded">Silage Harvesting</span>
+                </div>
+
+                <div class="gallery-item wanda group relative rounded-2xl overflow-hidden aspect-[4/3] bg-slate-900 cursor-pointer shadow-md" onclick="openMediaModal('https://images.unsplash.com/photo-1586771107445-d3ca888129ff?q=80&w=1200', 'Wanda mixing and pellet formulation')">
+                    <img src="https://images.unsplash.com/photo-1586771107445-d3ca888129ff?q=80&w=600&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" alt="Wanda mill processing" loading="lazy">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center"><i class="fa-solid fa-magnifying-glass-plus text-white text-2xl"></i></div>
+                    <span class="absolute bottom-2 left-2 bg-black/60 backdrop-blur-sm text-white text-[11px] px-2 py-0.5 rounded">Wanda Mill Mixer</span>
+                </div>
+
+                <div class="gallery-item silage group relative rounded-2xl overflow-hidden aspect-[4/3] bg-slate-900 cursor-pointer shadow-md" onclick="openMediaModal('https://images.unsplash.com/photo-1574943320219-553eb213f72d?q=80&w=1200', 'UV-wrapped corn silage bales')">
+                    <img src="https://images.unsplash.com/photo-1574943320219-553eb213f72d?q=80&w=600&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" alt="Baled silage stock" loading="lazy">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center"><i class="fa-solid fa-magnifying-glass-plus text-white text-2xl"></i></div>
+                    <span class="absolute bottom-2 left-2 bg-black/60 backdrop-blur-sm text-white text-[11px] px-2 py-0.5 rounded">Wrapped Silage Bales</span>
+                </div>
+
+                <div class="gallery-item silage group relative rounded-2xl overflow-hidden aspect-[4/3] bg-slate-900 cursor-pointer shadow-md" onclick="openMediaModal('https://images.unsplash.com/photo-1546445317-29f4545e9d53?q=80&w=1200', 'Dairy cattle fed on silage and wanda')">
+                    <img src="https://images.unsplash.com/photo-1546445317-29f4545e9d53?q=80&w=600&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" alt="Dairy cattle eating" loading="lazy">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center"><i class="fa-solid fa-magnifying-glass-plus text-white text-2xl"></i></div>
+                    <span class="absolute bottom-2 left-2 bg-black/60 backdrop-blur-sm text-white text-[11px] px-2 py-0.5 rounded">High Milk Yield Dairy</span>
+                </div>
+
+                <div class="gallery-item wanda group relative rounded-2xl overflow-hidden aspect-[4/3] bg-slate-900 cursor-pointer shadow-md" onclick="openMediaModal('https://images.unsplash.com/photo-1560493676-04071c5f467b?q=80&w=1200', 'Wholesale wanda bags ready for dispatch')">
+                    <img src="https://images.unsplash.com/photo-1560493676-04071c5f467b?q=80&w=600&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" alt="Wanda storage" loading="lazy">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center"><i class="fa-solid fa-magnifying-glass-plus text-white text-2xl"></i></div>
+                    <span class="absolute bottom-2 left-2 bg-black/60 backdrop-blur-sm text-white text-[11px] px-2 py-0.5 rounded">Wholesale Wanda Bags</span>
+                </div>
+
+                <div class="gallery-item silage group relative rounded-2xl overflow-hidden aspect-[4/3] bg-slate-900 cursor-pointer shadow-md" onclick="openMediaModal('https://images.unsplash.com/photo-1605000797499-95a51c5269ae?q=80&w=1200', 'Bulk dispatch across Punjab')">
+                    <img src="https://images.unsplash.com/photo-1605000797499-95a51c5269ae?q=80&w=600&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" alt="Agricultural logistics" loading="lazy">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center"><i class="fa-solid fa-magnifying-glass-plus text-white text-2xl"></i></div>
+                    <span class="absolute bottom-2 left-2 bg-black/60 backdrop-blur-sm text-white text-[11px] px-2 py-0.5 rounded">24/7 Bulk Dispatch</span>
+                </div>
+
+                <!-- Watch on YouTube card -->
+                <a href="https://youtube.com/@jsdairiesgoatfarm" target="_blank" class="group relative rounded-2xl overflow-hidden aspect-[4/3] bg-red-700 shadow-md flex flex-col items-center justify-center text-white text-center p-4 hover:bg-red-600 transition">
+                    <i class="fa-brands fa-youtube text-4xl mb-3"></i>
+                    <span class="font-bold text-sm">Watch Live Farm Videos</span>
+                    <span class="text-xs text-red-100 mt-1">@jsdairiesgoatfarm on YouTube</span>
+                </a>
+
+                <!-- Follow on Instagram card -->
+                <a href="https://www.instagram.com/drabdulbasitjsfarms" target="_blank" class="group relative rounded-2xl overflow-hidden aspect-[4/3] bg-gradient-to-br from-purple-600 via-pink-600 to-amber-500 shadow-md flex flex-col items-center justify-center text-white text-center p-4 hover:brightness-110 transition">
+                    <i class="fa-brands fa-instagram text-4xl mb-3"></i>
+                    <span class="font-bold text-sm">Daily Reels &amp; Photos</span>
+                    <span class="text-xs text-white/90 mt-1">@drabdulbasitjsfarms on Instagram</span>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal for Photos -->
+    <div id="mediaModal" class="fixed inset-0 z-[70] bg-black/90 hidden items-center justify-center p-4">
+        <div class="relative max-w-4xl w-full bg-slate-950 rounded-2xl overflow-hidden border border-slate-800 shadow-2xl">
+            <button onclick="closeMediaModal()" class="absolute top-4 right-4 z-20 w-10 h-10 rounded-full bg-white/20 hover:bg-white/40 text-white flex items-center justify-center text-lg" aria-label="Close">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div id="modalContent" class="w-full aspect-video bg-black flex items-center justify-center overflow-hidden"></div>
+            <div class="p-4 bg-slate-900 text-white"><h4 id="modalCaption" class="text-sm font-semibold"></h4></div>
+        </div>
+    </div>
+
+    <!-- Reviews & Experience Highlights Section -->
+    <section id="reviews" class="py-16 bg-slate-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center mb-12">
+                <!-- Summary Card -->
+                <div class="lg:col-span-5 bg-slate-800/80 p-8 rounded-3xl border border-slate-700 backdrop-blur-sm reveal">
+                    <div class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-emerald-400 bg-emerald-950/60 px-3 py-1 rounded-full border border-emerald-500/30">
+                        <i class="fa-brands fa-google"></i> Google Maps Rating
+                    </div>
+
+                    <div class="flex items-baseline space-x-3 mt-4">
+                        <span class="text-6xl font-black text-white tracking-tight">5.0</span>
+                        <div>
+                            <div class="flex text-amberGold-400 text-xl">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                            <span class="text-xs text-stone-300 font-medium">100% Positive Feedback • 3 Reviews</span>
+                        </div>
+                    </div>
+
+                    <p class="text-slate-300 text-sm mt-4 leading-relaxed">
+                        Farmers and dairy breeders across Hasilpur and South Punjab commend JS Silage Wanda Factory for uncompromised corn silage freshness, superior feed conversion ratios, and round-the-clock wholesale availability.
+                    </p>
+
+                    <div class="pt-6">
+                        <a href="https://www.google.com/maps/place/JS+Silage+Wanda+Factory/@29.7046875,72.4388397,13z/data=!4m10!1m2!2m1!1sjs+feeds+and+fodders+!3m6!1s0x393c5900177fea45:0x5542c989519bef04!8m2!3d29.7046875!4d72.5109375!15sChRqcyBmZWVkcyBhbmQgZm9kZGVyc5IBCndob2xlc2FsZXLgAQA!16s%2Fg%2F11y9c_qpgb?entry=ttu&g_ep=EgoyMDI2MDgxOS4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="inline-flex items-center justify-center w-full px-5 py-3 rounded-xl bg-white text-slate-900 font-bold text-sm hover:bg-stone-100 transition shadow">
+                            <i class="fa-solid fa-arrow-up-right-from-square mr-2 text-brand-700"></i> View on Google Maps / Leave Review
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Highlight Metrics -->
+                <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4 reveal-stagger">
+                    <div class="bg-slate-800/50 p-6 rounded-2xl border border-slate-700/70">
+                        <div class="w-10 h-10 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-lg mb-3"><i class="fa-solid fa-cow"></i></div>
+                        <h4 class="text-base font-bold text-white">Noticeable Milk Boost</h4>
+                        <p class="text-xs text-slate-400 mt-1.5 leading-relaxed">Dairy farmers report average 1.5 - 2.5 Liters milk rise per cow within two weeks of feeding JS Corn Silage &amp; Wanda.</p>
+                    </div>
+                    <div class="bg-slate-800/50 p-6 rounded-2xl border border-slate-700/70">
+                        <div class="w-10 h-10 rounded-xl bg-amber-500/20 text-amberGold-400 flex items-center justify-center text-lg mb-3"><i class="fa-solid fa-business-time"></i></div>
+                        <h4 class="text-base font-bold text-white">24/7 Gate Dispatch</h4>
+                        <p class="text-xs text-slate-400 mt-1.5 leading-relaxed">No delays. Our Hasilpur loading bay handles orders through late nights and early mornings seamlessly.</p>
+                    </div>
+                    <div class="bg-slate-800/50 p-6 rounded-2xl border border-slate-700/70">
+                        <div class="w-10 h-10 rounded-xl bg-blue-500/20 text-blue-400 flex items-center justify-center text-lg mb-3"><i class="fa-solid fa-wheat-awn"></i></div>
+                        <h4 class="text-base font-bold text-white">Grain-Rich Chopping</h4>
+                        <p class="text-xs text-slate-400 mt-1.5 leading-relaxed">Every silage bale contains mature whole maize grains with optimal moisture for ideal pH ferment.</p>
+                    </div>
+                    <div class="bg-slate-800/50 p-6 rounded-2xl border border-slate-700/70">
+                        <div class="w-10 h-10 rounded-xl bg-purple-500/20 text-purple-400 flex items-center justify-center text-lg mb-3"><i class="fa-solid fa-handshake-angle"></i></div>
+                        <h4 class="text-base font-bold text-white">Wholesale Pricing</h4>
+                        <p class="text-xs text-slate-400 mt-1.5 leading-relaxed">Direct factory prices with tiered discounts on full truckloads (Trola/Mazda) dispatched anywhere.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Customer Review Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 reveal-stagger">
+
+                <div class="review-card bg-slate-800 p-6 rounded-2xl border border-slate-700 flex flex-col justify-between transition-all">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-10 h-10 rounded-full bg-emerald-700 text-white font-bold flex items-center justify-center text-sm">MJ</div>
+                                <div><h5 class="text-sm font-bold text-white">Malik Junaid Dairy</h5><span class="text-[11px] text-slate-400">Verified Buyer • Hasilpur</span></div>
+                            </div>
+                            <i class="fa-brands fa-google text-slate-500"></i>
+                        </div>
+                        <div class="flex text-amberGold-400 text-xs mb-3"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                        <p class="text-xs sm:text-sm text-slate-300 italic leading-relaxed">"Best silage factory in Hasilpur! The corn silage quality has high grain content and my dairy cows showed an immediate increase in milk production and butterfat. Highly recommended wholesaler."</p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-slate-700/60 text-[11px] text-emerald-400 font-semibold flex items-center"><i class="fa-solid fa-circle-check mr-1.5"></i> 5.0 Star Experience</div>
+                </div>
+
+                <div class="review-card bg-slate-800 p-6 rounded-2xl border border-slate-700 flex flex-col justify-between transition-all">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-10 h-10 rounded-full bg-amber-600 text-white font-bold flex items-center justify-center text-sm">CH</div>
+                                <div><h5 class="text-sm font-bold text-white">Chaudhry Haroon</h5><span class="text-[11px] text-slate-400">Commercial Cattle Farmer</span></div>
+                            </div>
+                            <i class="fa-brands fa-google text-slate-500"></i>
+                        </div>
+                        <div class="flex text-amberGold-400 text-xs mb-3"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                        <p class="text-xs sm:text-sm text-slate-300 italic leading-relaxed">"Their Wanda formula is genuine and pure. No adulteration. Plus being open 24 hours is a huge blessing because our tractor trolley arrived at 2:00 AM and staff loaded everything quickly."</p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-slate-700/60 text-[11px] text-emerald-400 font-semibold flex items-center"><i class="fa-solid fa-circle-check mr-1.5"></i> 5.0 Star Experience</div>
+                </div>
+
+                <div class="review-card bg-slate-800 p-6 rounded-2xl border border-slate-700 flex flex-col justify-between transition-all">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-10 h-10 rounded-full bg-blue-600 text-white font-bold flex items-center justify-center text-sm">TS</div>
+                                <div><h5 class="text-sm font-bold text-white">Tariq Saeed Feeds</h5><span class="text-[11px] text-slate-400">Feed Dealer &amp; Wholesaler</span></div>
+                            </div>
+                            <i class="fa-brands fa-google text-slate-500"></i>
+                        </div>
+                        <div class="flex text-amberGold-400 text-xs mb-3"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                        <p class="text-xs sm:text-sm text-slate-300 italic leading-relaxed">"We purchase silage bales in bulk quantities. Tight packing, zero fungus or spoilage, and reliable delivery. The owner and management are extremely professional to deal with."</p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-slate-700/60 text-[11px] text-emerald-400 font-semibold flex items-center"><i class="fa-solid fa-circle-check mr-1.5"></i> 5.0 Star Experience</div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Popular Times Section -->
+    <section id="popular-times" class="py-16 bg-white border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-10 reveal">
+                <span class="text-xs font-bold uppercase tracking-wider text-brand-700 bg-brand-100 px-3 py-1 rounded-full">Factory Traffic</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-2 tracking-tight">Popular Times &amp; Rush Hours</h2>
+                <p class="text-slate-600 text-sm sm:text-base mt-2">JS Silage Wanda Factory is <strong>open 24 hours every day</strong>. Check typical loading &amp; dispatch activity to plan your vehicle arrival.</p>
+            </div>
+
+            <div class="max-w-4xl mx-auto bg-stone-50 rounded-3xl p-6 sm:p-8 border border-stone-200 shadow-sm reveal">
+
+                <div class="flex items-center justify-between border-b border-stone-200 pb-4 mb-6 overflow-x-auto gap-2">
+                    <span class="text-xs font-bold uppercase tracking-wider text-slate-500 shrink-0 hidden sm:inline">Select Day:</span>
+                    <div class="flex space-x-1 sm:space-x-2" id="daySelector">
+                        <button onclick="updatePopularTimes('Monday')" class="day-tab px-3 py-1.5 rounded-lg text-xs font-bold bg-white text-slate-700 border border-slate-200 hover:bg-slate-100">Mon</button>
+                        <button onclick="updatePopularTimes('Tuesday')" class="day-tab px-3 py-1.5 rounded-lg text-xs font-bold bg-white text-slate-700 border border-slate-200 hover:bg-slate-100">Tue</button>
+                        <button onclick="updatePopularTimes('Wednesday')" class="day-tab px-3 py-1.5 rounded-lg text-xs font-bold bg-white text-slate-700 border border-slate-200 hover:bg-slate-100">Wed</button>
+                        <button onclick="updatePopularTimes('Thursday')" class="day-tab px-3 py-1.5 rounded-lg text-xs font-bold bg-white text-slate-700 border border-slate-200 hover:bg-slate-100">Thu</button>
+                        <button onclick="updatePopularTimes('Friday')" class="day-tab active px-3 py-1.5 rounded-lg text-xs font-bold bg-brand-700 text-white shadow-sm">Fri</button>
+                        <button onclick="updatePopularTimes('Saturday')" class="day-tab px-3 py-1.5 rounded-lg text-xs font-bold bg-white text-slate-700 border border-slate-200 hover:bg-slate-100">Sat</button>
+                        <button onclick="updatePopularTimes('Sunday')" class="day-tab px-3 py-1.5 rounded-lg text-xs font-bold bg-white text-slate-700 border border-slate-200 hover:bg-slate-100">Sun</button>
+                    </div>
+                </div>
+
+                <div class="flex items-center justify-between mb-6">
+                    <div>
+                        <div class="text-sm font-bold text-slate-800" id="selectedDayTitle">Friday Factory Schedule</div>
+                        <div class="text-xs text-slate-500" id="busyStatusText">Usually moderately busy • Peak dispatch from 10:00 AM to 5:00 PM</div>
+                    </div>
+                    <div class="px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold flex items-center">
+                        <span class="w-2 h-2 rounded-full bg-emerald-500 animate-ping mr-1.5"></span> Open 24 Hours
+                    </div>
+                </div>
+
+                <div class="relative pt-6 pb-2">
+                    <div class="h-44 flex items-end justify-between gap-1 sm:gap-2 px-1" id="chartBars"></div>
+                    <div class="w-full h-px bg-slate-300 mt-2"></div>
+                    <div class="flex justify-between text-[10px] sm:text-xs text-slate-400 pt-2 font-medium">
+                        <span>12 AM</span><span>4 AM</span><span>8 AM</span><span>12 PM</span><span>4 PM</span><span>8 PM</span><span>11 PM</span>
+                    </div>
+                </div>
+
+                <div class="mt-6 p-3.5 rounded-xl bg-amber-50 border border-amber-200/80 flex items-center space-x-3 text-xs text-amber-900">
+                    <i class="fa-solid fa-lightbulb text-amber-600 text-base shrink-0"></i>
+                    <span><strong>Pro Tip for Truck Drivers:</strong> Night loadings (9:00 PM - 5:00 AM) experience zero waiting queues for fast weighing &amp; freight departure.</span>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Map & Contact Section -->
+    <section id="contact" class="py-16 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+
+                <!-- Left Details & Quick Quote Form -->
+                <div class="lg:col-span-5 space-y-6 reveal">
+                    <div>
+                        <span class="text-xs font-bold uppercase tracking-wider text-brand-700 bg-brand-100 px-3 py-1 rounded-full">Contact Wholesaler</span>
+                        <h2 class="text-3xl font-extrabold text-slate-900 mt-2 tracking-tight">Visit Factory or Request Quote</h2>
+                        <p class="text-slate-600 text-sm mt-1">Get immediate factory rates on baled silage, loose silage bunkers, alfalfa hay, and customized wanda bags.</p>
+                    </div>
+
+                    <div class="space-y-3">
+                        <a href="tel:+923332827158" class="flex items-center p-3.5 bg-white rounded-xl border border-slate-200 hover:border-brand-500 hover:shadow-sm transition">
+                            <div class="w-11 h-11 rounded-lg bg-emerald-100 text-emerald-700 flex items-center justify-center text-lg mr-3.5 shrink-0"><i class="fa-solid fa-phone"></i></div>
+                            <div><span class="text-xs text-slate-500 font-semibold block">Factory Phone Number (24/7)</span><span class="text-base font-bold text-slate-900">+92 333 2827158</span></div>
+                        </a>
+
+                        <a href="https://wa.me/923332827158?text=Hello%20JS%20Silage%20Wanda%20Factory%2C%20I%20want%20to%20place%20an%20order" target="_blank" class="flex items-center p-3.5 bg-white rounded-xl border border-slate-200 hover:border-emerald-500 hover:shadow-sm transition">
+                            <div class="w-11 h-11 rounded-lg bg-emerald-600 text-white flex items-center justify-center text-xl mr-3.5 shrink-0"><i class="fa-brands fa-whatsapp"></i></div>
+                            <div><span class="text-xs text-slate-500 font-semibold block">Direct WhatsApp Order</span><span class="text-base font-bold text-slate-900">Chat with Manager (+92 333 2827158)</span></div>
+                        </a>
+
+                        <a href="mailto:drabhsp@gmail.com" class="flex items-center p-3.5 bg-white rounded-xl border border-slate-200 hover:border-blue-500 hover:shadow-sm transition">
+                            <div class="w-11 h-11 rounded-lg bg-blue-100 text-blue-700 flex items-center justify-center text-lg mr-3.5 shrink-0"><i class="fa-solid fa-envelope"></i></div>
+                            <div><span class="text-xs text-slate-500 font-semibold block">Email Inquiries</span><span class="text-base font-bold text-slate-900">drabhsp@gmail.com</span></div>
+                        </a>
+
+                        <div class="flex items-center p-3.5 bg-white rounded-xl border border-slate-200">
+                            <div class="w-11 h-11 rounded-lg bg-amber-100 text-amber-700 flex items-center justify-center text-lg mr-3.5 shrink-0"><i class="fa-solid fa-location-dot"></i></div>
+                            <div><span class="text-xs text-slate-500 font-semibold block">Factory Address</span><span class="text-sm font-bold text-slate-900">Dhollan Wala Pull, Talhar Road, Hasilpur, Bahawalpur District, Punjab, Pakistan</span></div>
+                        </div>
+
+                        <!-- Social Row -->
+                        <div class="flex items-center gap-3 pt-1">
+                            <a href="https://www.facebook.com/jssilagehasilpur/" target="_blank" class="w-11 h-11 rounded-xl bg-white border border-slate-200 hover:border-blue-500 text-blue-700 flex items-center justify-center transition hover:shadow-sm" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="https://www.instagram.com/drabdulbasitjsfarms" target="_blank" class="w-11 h-11 rounded-xl bg-white border border-slate-200 hover:border-pink-500 text-pink-600 flex items-center justify-center transition hover:shadow-sm" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="https://youtube.com/@jsdairiesgoatfarm" target="_blank" class="w-11 h-11 rounded-xl bg-white border border-slate-200 hover:border-red-500 text-red-600 flex items-center justify-center transition hover:shadow-sm" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Fast Callback Request -->
+                    <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm">
+                        <h4 class="text-sm font-bold text-slate-900 mb-3 flex items-center"><i class="fa-solid fa-envelope text-brand-600 mr-2"></i> Fast Callback Request</h4>
+                        <form id="contactForm" onsubmit="handleContactSubmit(event)" class="space-y-3">
+                            <input type="text" id="custName" required placeholder="Your Name / Farm Name" class="w-full text-xs sm:text-sm px-3.5 py-2.5 rounded-lg bg-slate-50 border border-slate-200 focus:outline-none focus:border-brand-600 focus:bg-white">
+                            <input type="tel" id="custPhone" required placeholder="Phone Number (e.g. 0333 1234567)" class="w-full text-xs sm:text-sm px-3.5 py-2.5 rounded-lg bg-slate-50 border border-slate-200 focus:outline-none focus:border-brand-600 focus:bg-white">
+                            <select id="custProduct" class="w-full text-xs sm:text-sm px-3.5 py-2.5 rounded-lg bg-slate-50 border border-slate-200 focus:outline-none focus:border-brand-600 focus:bg-white text-slate-700">
+                                <option value="Corn Silage (Bales / Bulk)">Corn Silage (Bales / Bulk)</option>
+                                <option value="Dairy Wanda (Milking Buffalo / Cow)">Dairy Wanda (Milking Buffalo / Cow)</option>
+                                <option value="Calf / Fattening Wanda">Calf / Fattening Wanda</option>
+                                <option value="Alfalfa Hay">Alfalfa Hay</option>
+                                <option value="Goat Wanda (TMR)">Goat Wanda (TMR)</option>
+                                <option value="Custom Bulk Truckload">Custom Bulk Truckload</option>
+                            </select>
+                            <textarea id="custMsg" rows="2" placeholder="Quantity required (e.g. 10 Tons Silage, 50 Bags Wanda)..." class="w-full text-xs sm:text-sm px-3.5 py-2.5 rounded-lg bg-slate-50 border border-slate-200 focus:outline-none focus:border-brand-600 focus:bg-white"></textarea>
+                            <button type="submit" class="w-full py-2.5 rounded-lg bg-brand-700 hover:bg-brand-800 text-white font-bold text-xs uppercase tracking-wider transition">Send WhatsApp Inquiry</button>
+                        </form>
+                    </div>
+
+                </div>
+
+                <!-- Right: Map Embed -->
+                <div class="lg:col-span-7 flex flex-col reveal" style="transition-delay:0.1s">
+                    <div class="bg-white p-3 rounded-2xl border border-slate-200 shadow-sm flex-1 flex flex-col">
+
+                        <div class="p-3 bg-slate-900 text-white rounded-xl mb-3 flex flex-wrap items-center justify-between gap-2">
+                            <div>
+                                <h3 class="text-sm font-bold flex items-center"><i class="fa-solid fa-location-crosshairs text-emerald-400 mr-2"></i> JS Silage Wanda Factory Map</h3>
+                                <p class="text-[11px] text-slate-300">GPS: 29.7046875, 72.5109375 • Hasilpur, Pakistan</p>
+                            </div>
+                            <a href="https://www.google.com/maps/place/JS+Silage+Wanda+Factory/@29.7046875,72.4388397,13z/data=!4m10!1m2!2m1!1sjs+feeds+and+fodders+!3m6!1s0x393c5900177fea45:0x5542c989519bef04!8m2!3d29.7046875!4d72.5109375!15sChRqcyBmZWVkcyBhbmQgZm9kZGVyc5IBCndob2xlc2FsZXLgAQA!16s%2Fg%2F11y9c_qpgb?entry=ttu&g_ep=EgoyMDI2MDgxOS4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="px-3.5 py-1.5 rounded-lg bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-xs transition flex items-center shadow">
+                                <i class="fa-solid fa-diamond-turn-right mr-1.5"></i> Open in Google Maps
+                            </a>
+                        </div>
+
+                        <div class="w-full flex-1 min-h-[380px] rounded-xl overflow-hidden relative border border-slate-200">
+                            <iframe title="JS Silage Wanda Factory Location Map" class="w-full h-full min-h-[380px] border-0" src="https://maps.google.com/maps?q=29.7046875,72.5109375&hl=en&z=13&output=embed" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                            <div class="absolute bottom-4 left-4 right-4 sm:right-auto sm:max-w-xs bg-white/95 backdrop-blur-md p-3.5 rounded-xl border border-slate-200 shadow-xl text-slate-800">
+                                <div class="flex items-center space-x-2">
+                                    <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                                    <span class="text-xs font-extrabold text-slate-900">JS Silage Wanda Factory</span>
+                                </div>
+                                <p class="text-[11px] text-slate-600 mt-1">Wholesale Feeds &amp; Fodders • Open 24 Hours</p>
+                                <div class="mt-2 flex items-center justify-between text-xs">
+                                    <span class="text-amber-600 font-bold">5.0 ★★★★★ (3)</span>
+                                    <a href="tel:+923332827158" class="text-brand-700 font-bold hover:underline">+92 333 2827158</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 text-white pt-14 pb-8 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 pb-12 border-b border-slate-800">
+
+                <div class="space-y-4">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 rounded-xl bg-brand-700 flex items-center justify-center text-white"><i class="fa-solid fa-wheat-awn text-xl text-amberGold-400"></i></div>
+                        <div><span class="text-lg font-black tracking-tight text-white block">JS SILAGE</span><span class="text-[10px] tracking-wider uppercase font-semibold text-emerald-400 block">&amp; Wanda Factory Hasilpur</span></div>
+                    </div>
+                    <p class="text-xs text-slate-400 leading-relaxed">Hasilpur's reliable wholesaler for prime maize silage, alfalfa hay and nutrient-rich cattle &amp; goat wanda. Committed to high dairy yields and farmer prosperity.</p>
+                    <div class="flex space-x-3 text-slate-400 pt-1">
+                        <a href="https://wa.me/923332827158" target="_blank" class="w-8 h-8 rounded-full bg-slate-800 hover:bg-emerald-600 hover:text-white flex items-center justify-center transition" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp text-sm"></i></a>
+                        <a href="tel:+923332827158" class="w-8 h-8 rounded-full bg-slate-800 hover:bg-brand-600 hover:text-white flex items-center justify-center transition" aria-label="Call"><i class="fa-solid fa-phone text-sm"></i></a>
+                        <a href="https://www.facebook.com/jssilagehasilpur/" target="_blank" class="w-8 h-8 rounded-full bg-slate-800 hover:bg-blue-600 hover:text-white flex items-center justify-center transition" aria-label="Facebook"><i class="fa-brands fa-facebook-f text-sm"></i></a>
+                        <a href="https://www.instagram.com/drabdulbasitjsfarms" target="_blank" class="w-8 h-8 rounded-full bg-slate-800 hover:bg-pink-600 hover:text-white flex items-center justify-center transition" aria-label="Instagram"><i class="fa-brands fa-instagram text-sm"></i></a>
+                        <a href="https://youtube.com/@jsdairiesgoatfarm" target="_blank" class="w-8 h-8 rounded-full bg-slate-800 hover:bg-red-600 hover:text-white flex items-center justify-center transition" aria-label="YouTube"><i class="fa-brands fa-youtube text-sm"></i></a>
+                    </div>
+                </div>
+
+                <div class="space-y-3">
+                    <h5 class="text-sm font-bold text-white uppercase tracking-wider">Quick Navigation</h5>
+                    <ul class="text-xs text-slate-400 space-y-2">
+                        <li><a href="#about" class="hover:text-emerald-400 transition">About JS Silage</a></li>
+                        <li><a href="#products" class="hover:text-emerald-400 transition">Browse &amp; Order Products</a></li>
+                        <li><a href="#gallery" class="hover:text-emerald-400 transition">Photo &amp; Video Gallery</a></li>
+                        <li><a href="#reviews" class="hover:text-emerald-400 transition">5.0 Star Rating &amp; Reviews</a></li>
+                        <li><a href="#popular-times" class="hover:text-emerald-400 transition">Popular Working Times</a></li>
+                        <li><a href="#contact" class="hover:text-emerald-400 transition">Location &amp; Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="space-y-3">
+                    <h5 class="text-sm font-bold text-white uppercase tracking-wider">Working Hours</h5>
+                    <div class="bg-slate-900 p-3.5 rounded-xl border border-slate-800 text-xs space-y-1.5">
+                        <div class="flex justify-between text-slate-300"><span>Monday - Sunday:</span><span class="text-emerald-400 font-bold">Open 24 Hours</span></div>
+                        <div class="flex justify-between text-slate-300"><span>Dispatch Gate:</span><span class="text-amberGold-400 font-bold">24/7 Loading</span></div>
+                        <div class="text-[11px] text-slate-400 pt-1">No off days. Supplies dispatched across Punjab round the clock.</div>
+                    </div>
+                </div>
+
+                <div class="space-y-3">
+                    <h5 class="text-sm font-bold text-white uppercase tracking-wider">Contact &amp; Location</h5>
+                    <ul class="text-xs text-slate-400 space-y-2.5">
+                        <li class="flex items-start"><i class="fa-solid fa-phone text-emerald-400 mt-0.5 mr-2.5"></i><a href="tel:+923332827158" class="text-white font-semibold hover:text-emerald-400">+92 333 2827158</a></li>
+                        <li class="flex items-start"><i class="fa-solid fa-envelope text-blue-400 mt-0.5 mr-2.5"></i><a href="mailto:drabhsp@gmail.com" class="hover:text-emerald-400">drabhsp@gmail.com</a></li>
+                        <li class="flex items-start"><i class="fa-solid fa-location-dot text-amberGold-400 mt-0.5 mr-2.5"></i><span>Dhollan Wala Pull, Talhar Road, Hasilpur, Punjab, Pakistan</span></li>
+                        <li class="flex items-start"><i class="fa-solid fa-shield-check text-blue-400 mt-0.5 mr-2.5"></i><span>Wholesale Cattle &amp; Goat Feed Manufacturer</span></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="pt-6 flex flex-col sm:flex-row justify-between items-center text-xs text-slate-500 gap-3">
+                <p>&copy; <span id="currentYear"></span> JS Silage Wanda Factory, Hasilpur. All rights reserved.</p>
+                <div class="flex space-x-4">
+                    <a href="https://www.google.com/maps/place/JS+Silage+Wanda+Factory/@29.7046875,72.4388397,13z/data=!4m10!1m2!2m1!1sjs+feeds+and+fodders+!3m6!1s0x393c5900177fea45:0x5542c989519bef04!8m2!3d29.7046875!4d72.5109375!15sChRqcyBmZWVkcyBhbmQgZm9kZGVyc5IBCndob2xlc2FsZXLgAQA!16s%2Fg%2F11y9c_qpgb?entry=ttu&g_ep=EgoyMDI2MDgxOS4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="hover:text-stone-300">Google Maps Profile</a>
+                    <span>•</span>
+                    <a href="tel:+923332827158" class="hover:text-stone-300">Call Wholesaler</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Order Cart Panel -->
+    <div id="cartOverlay" class="fixed inset-0 bg-black/50 z-[80] hidden" onclick="toggleCart(false)"></div>
+    <div id="cartPanel" class="fixed top-0 right-0 h-full w-full sm:w-96 bg-white z-[90] hidden flex-col shadow-2xl">
+        <div class="p-5 bg-brand-800 text-white flex items-center justify-between shrink-0">
+            <h3 class="font-bold text-lg flex items-center"><i class="fa-solid fa-cart-shopping mr-2.5 text-amberGold-400"></i> Your Order</h3>
+            <button onclick="toggleCart(false)" class="w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center" aria-label="Close cart"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+
+        <div id="cartItems" class="flex-1 overflow-y-auto p-5 space-y-3">
+            <!-- injected -->
+        </div>
+
+        <div id="cartEmptyState" class="flex-1 flex flex-col items-center justify-center text-center p-8 text-slate-400">
+            <i class="fa-solid fa-basket-shopping text-4xl mb-3 text-slate-300"></i>
+            <p class="text-sm font-semibold text-slate-500">Your order list is empty</p>
+            <p class="text-xs mt-1">Browse products and tap "Add to Order" to build your wholesale request.</p>
+            <a href="#products" onclick="toggleCart(false)" class="mt-4 px-4 py-2 rounded-lg bg-brand-700 text-white text-xs font-bold">Browse Products</a>
+        </div>
+
+        <div id="cartFooter" class="p-5 border-t border-slate-200 shrink-0 hidden space-y-3">
+            <div class="flex items-center justify-between text-sm">
+                <span class="text-slate-500 font-medium">Total items in order</span>
+                <span id="cartTotalCount" class="font-bold text-slate-900">0</span>
+            </div>
+            <a id="cartWhatsappBtn" href="#" target="_blank" class="w-full flex items-center justify-center py-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm transition">
+                <i class="fa-brands fa-whatsapp mr-2 text-lg"></i> Send Order via WhatsApp
+            </a>
+            <button onclick="clearCart()" class="w-full py-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-600 font-semibold text-xs">Clear Order</button>
+        </div>
+    </div>
+
+    <!-- Floating Action Buttons -->
+    <div class="fixed bottom-5 right-5 z-40 flex flex-col gap-3">
+        <a href="https://wa.me/923332827158?text=Hello%20JS%20Silage%20Wanda%20Factory%2C%20please%20send%20wholesale%20rates" target="_blank" class="w-14 h-14 bg-emerald-600 hover:bg-emerald-500 text-white rounded-full shadow-2xl flex items-center justify-center transition-all hover:scale-110" aria-label="Chat on WhatsApp">
+            <i class="fa-brands fa-whatsapp text-2xl"></i>
+        </a>
+    </div>
+
+    <!-- JavaScript Interactions -->
+    <script>
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // Mobile Nav Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        mobileMenuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+        document.querySelectorAll('#mobileMenu a').forEach(link => {
+            link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+        });
+
+        // Scroll reveal via IntersectionObserver
+        const revealTargets = document.querySelectorAll('.reveal, .reveal-stagger');
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('in-view');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+        revealTargets.forEach(el => revealObserver.observe(el));
+
+        // Gallery Filtering
+        function filterGallery(category, evt) {
+            const items = document.querySelectorAll('.gallery-item');
+            const buttons = document.querySelectorAll('.gallery-btn');
+            buttons.forEach(btn => {
+                btn.classList.remove('active', 'bg-brand-700', 'text-white');
+                btn.classList.add('bg-slate-100', 'text-slate-700');
+            });
+            if (evt && evt.currentTarget) {
+                evt.currentTarget.classList.remove('bg-slate-100', 'text-slate-700');
+                evt.currentTarget.classList.add('active', 'bg-brand-700', 'text-white');
+            }
+            items.forEach(item => {
+                item.style.display = (category === 'all' || item.classList.contains(category)) ? 'block' : 'none';
+            });
+        }
+
+        // Photo Modal
+        function openMediaModal(url, caption) {
+            const modal = document.getElementById('mediaModal');
+            const content = document.getElementById('modalContent');
+            document.getElementById('modalCaption').textContent = caption;
+            content.innerHTML = `<img src="${url}" class="max-h-[75vh] w-auto mx-auto object-contain" alt="${caption}">`;
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+        }
+        function closeMediaModal() {
+            const modal = document.getElementById('mediaModal');
+            document.getElementById('modalContent').innerHTML = '';
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+            document.body.style.overflow = 'auto';
+        }
+        document.getElementById('mediaModal').addEventListener('click', (e) => { if (e.target.id === 'mediaModal') closeMediaModal(); });
+        document.addEventListener('keydown', (e) => { if (e.key === 'Escape') { closeMediaModal(); toggleCart(false); } });
+
+        // Popular Times Dataset & Render Logic
+        const popularTimesData = {
+            'Monday': { title: 'Monday Factory Schedule', desc: 'Usually busy • Peak dispatch from 9:00 AM to 6:00 PM', data: [15,10,10,15,20,35,50,70,85,95,90,85,80,85,90,85,75,60,45,35,30,25,20,15] },
+            'Tuesday': { title: 'Tuesday Factory Schedule', desc: 'Steady wholesale rush • Peak loading from 10:00 AM to 5:00 PM', data: [12,10,10,15,20,30,55,75,85,90,90,80,75,80,85,80,70,55,40,30,25,20,15,12] },
+            'Wednesday': { title: 'Wednesday Factory Schedule', desc: 'High demand day • Peak from 9:00 AM to 7:00 PM', data: [15,10,12,15,25,35,60,80,95,100,95,85,80,90,95,90,80,65,50,40,30,25,20,15] },
+            'Thursday': { title: 'Thursday Factory Schedule', desc: 'Very busy • Farmers stock up before weekend dispatches', data: [20,15,12,18,30,45,70,85,95,100,95,90,85,90,95,90,85,70,55,45,35,30,25,20] },
+            'Friday': { title: 'Friday Factory Schedule', desc: 'Usually moderately busy • Continuous 24-hr round bale loading', data: [18,12,10,15,22,40,65,85,90,92,85,70,75,88,92,88,78,60,45,38,30,25,22,18] },
+            'Saturday': { title: 'Saturday Factory Schedule', desc: 'Peak dispatch day for long-haul Punjab tractor trolleys', data: [22,18,15,20,35,50,75,90,100,100,95,90,88,95,100,92,85,70,55,45,38,30,25,20] },
+            'Sunday': { title: 'Sunday Factory Schedule', desc: 'Open 24 Hours • Smoothest loading with minimal truck waiting', data: [20,15,12,15,20,30,45,60,70,75,75,70,68,72,75,70,65,55,45,35,30,25,22,18] }
+        };
+
+        function updatePopularTimes(day) {
+            document.querySelectorAll('.day-tab').forEach(tab => {
+                if (tab.textContent.trim().toLowerCase() === day.substring(0, 3).toLowerCase()) {
+                    tab.classList.add('bg-brand-700', 'text-white', 'shadow-sm');
+                    tab.classList.remove('bg-white', 'text-slate-700');
+                } else {
+                    tab.classList.remove('bg-brand-700', 'text-white', 'shadow-sm');
+                    tab.classList.add('bg-white', 'text-slate-700');
+                }
+            });
+
+            const dayInfo = popularTimesData[day];
+            document.getElementById('selectedDayTitle').textContent = dayInfo.title;
+            document.getElementById('busyStatusText').textContent = dayInfo.desc;
+
+            const chartContainer = document.getElementById('chartBars');
+            chartContainer.innerHTML = '';
+            const currentHour = new Date().getHours();
+            const isToday = (day === ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'][new Date().getDay()]);
+
+            dayInfo.data.forEach((val, hour) => {
+                const barWrapper = document.createElement('div');
+                barWrapper.className = 'flex-1 flex flex-col items-center h-full justify-end group relative';
+
+                const tooltip = document.createElement('div');
+                tooltip.className = 'absolute -top-7 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none bg-slate-900 text-white text-[10px] px-1.5 py-0.5 rounded whitespace-nowrap z-30';
+                const formatHour = hour === 0 ? '12 AM' : hour === 12 ? '12 PM' : hour > 12 ? `${hour-12} PM` : `${hour} AM`;
+                tooltip.textContent = `${formatHour}: ${val}% busy`;
+
+                const bar = document.createElement('div');
+                bar.className = 'w-full rounded-t-sm popular-bar';
+                bar.style.height = `${val}%`;
+
+                if (isToday && hour === currentHour) {
+                    bar.classList.add('bg-amber-500');
+                    tooltip.textContent = `Now (${formatHour}): ${val}% busy`;
+                } else if (val >= 85) {
+                    bar.classList.add('bg-brand-700', 'group-hover:bg-brand-600');
+                } else if (val >= 50) {
+                    bar.classList.add('bg-emerald-500', 'group-hover:bg-emerald-400');
+                } else {
+                    bar.classList.add('bg-emerald-200', 'group-hover:bg-emerald-300');
+                }
+
+                barWrapper.appendChild(tooltip);
+                barWrapper.appendChild(bar);
+                chartContainer.appendChild(barWrapper);
+            });
+        }
+        updatePopularTimes('Friday');
+
+        // Fast callback form -> WhatsApp
+        function handleContactSubmit(e) {
+            e.preventDefault();
+            const name = document.getElementById('custName').value;
+            const phone = document.getElementById('custPhone').value;
+            const product = document.getElementById('custProduct').value;
+            const msg = document.getElementById('custMsg').value;
+
+            const fullText = `*Wholesale Inquiry - JS Silage Wanda Factory*%0A` +
+                             `*Name/Farm:* ${encodeURIComponent(name)}%0A` +
+                             `*Phone:* ${encodeURIComponent(phone)}%0A` +
+                             `*Requirement:* ${encodeURIComponent(product)}%0A` +
+                             `*Details:* ${encodeURIComponent(msg || 'Requesting wholesale price list & availability')}`;
+
+            window.open(`https://wa.me/923332827158?text=${fullText}`, '_blank');
+        }
+
+        /* =========================
+           ORDER CART SYSTEM
+        ========================== */
+        const productMeta = {
+            silage: { unit: 'Bags/Bales' },
+            wanda: { unit: 'Bags' },
+            fattening: { unit: 'Bags' },
+            alfalfa: { unit: 'Bales' },
+            goat: { unit: 'Bags' }
+        };
+        const quantities = { silage: 1, wanda: 1, fattening: 1, alfalfa: 1, goat: 1 };
+        let cart = {}; // key -> { name, qty, unit }
+
+        function stepQty(key, delta) {
+            quantities[key] = Math.max(1, (quantities[key] || 1) + delta);
+            document.getElementById('qty-' + key).textContent = quantities[key];
+        }
+
+        function addToCart(key, name) {
+            const qty = quantities[key] || 1;
+            const unit = productMeta[key].unit;
+            if (cart[key]) {
+                cart[key].qty += qty;
+            } else {
+                cart[key] = { name, qty, unit };
+            }
+            renderCart();
+            pulseCartIcon();
+        }
+
+        function removeFromCart(key) {
+            delete cart[key];
+            renderCart();
+        }
+
+        function clearCart() {
+            cart = {};
+            renderCart();
+        }
+
+        function pulseCartIcon() {
+            document.querySelectorAll('#cartBadge, #cartBadgeMobile').forEach(b => {
+                b.classList.remove('cart-pop');
+                void b.offsetWidth;
+                b.classList.add('cart-pop');
+            });
+        }
+
+        function renderCart() {
+            const keys = Object.keys(cart);
+            const count = keys.reduce((sum, k) => sum + cart[k].qty, 0);
+
+            ['cartBadge', 'cartBadgeMobile'].forEach(id => {
+                const el = document.getElementById(id);
+                el.textContent = count;
+                el.classList.toggle('hidden', count === 0);
+            });
+
+            const itemsContainer = document.getElementById('cartItems');
+            const emptyState = document.getElementById('cartEmptyState');
+            const footer = document.getElementById('cartFooter');
+
+            if (keys.length === 0) {
+                itemsContainer.classList.add('hidden');
+                emptyState.classList.remove('hidden');
+                footer.classList.add('hidden');
+                return;
+            }
+
+            itemsContainer.classList.remove('hidden');
+            emptyState.classList.add('hidden');
+            footer.classList.remove('hidden');
+
+            itemsContainer.innerHTML = keys.map(k => {
+                const item = cart[k];
+                return `
+                <div class="flex items-center justify-between p-3.5 bg-slate-50 rounded-xl border border-slate-200">
+                    <div class="min-w-0">
+                        <p class="text-sm font-bold text-slate-900 truncate">${item.name}</p>
+                        <p class="text-xs text-slate-500 mt-0.5">${item.qty} × ${item.unit}</p>
+                    </div>
+                    <button onclick="removeFromCart('${k}')" class="w-8 h-8 shrink-0 rounded-lg bg-red-50 hover:bg-red-100 text-red-600 flex items-center justify-center ml-3" aria-label="Remove ${item.name}">
+                        <i class="fa-solid fa-trash text-xs"></i>
+                    </button>
+                </div>`;
+            }).join('');
+
+            document.getElementById('cartTotalCount').textContent = count;
+
+            let message = `*New Wholesale Order - JS Silage Wanda Factory*%0A%0A`;
+            keys.forEach(k => {
+                const item = cart[k];
+                message += `• ${item.name}: *${item.qty} ${item.unit}*%0A`;
+            });
+            message += `%0APlease confirm availability and today's wholesale rate. Thank you!`;
+
+            document.getElementById('cartWhatsappBtn').href = `https://wa.me/923332827158?text=${message}`;
+        }
+
+        function toggleCart(open) {
+            const panel = document.getElementById('cartPanel');
+            const overlay = document.getElementById('cartOverlay');
+            if (open) {
+                panel.classList.remove('hidden');
+                panel.classList.add('flex', 'cart-panel-open');
+                overlay.classList.remove('hidden');
+                document.body.style.overflow = 'hidden';
+            } else {
+                panel.classList.add('hidden');
+                panel.classList.remove('flex', 'cart-panel-open');
+                overlay.classList.add('hidden');
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+        renderCart();
+    </script>
+</body>
+</html>
